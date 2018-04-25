@@ -7,7 +7,11 @@
 [![made with lass](https://img.shields.io/badge/made_with-lass-95CC28.svg)](https://lass.js.org)
 [![license](https://img.shields.io/github/license/bartaxyz/gomoodboard-api.svg)](LICENSE)
 
-> Custom API for GoMoodboard
+Unofficial API package for GoMoodboard
+
+This is very lean package that uses scrapes the website of the board you request. And then returns all the images on the board in JSON format.
+
+:warning: This package could break anytime. It is **NOT** officially supported.
 
 
 ## Table of Contents
