@@ -10,7 +10,9 @@
   "contributors": [
     "Ondřej Bárta <email@ondrejbarta.xyz> (http://ondrejbarta.xyz)"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
   "ava": {
     "failFast": true,
     "verbose": true
