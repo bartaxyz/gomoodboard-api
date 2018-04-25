@@ -33,10 +33,12 @@ npm install gomoodboard-api
 ```js
 const GomoodboardApi = require('gomoodboard-api');
 
-GomoodboardApi.getBoard('pjK9oD41');
+GomoodboardApi.getBoard('pjK9oD41').then((data) => {
+  // Your code
+});
 ```
 
-The return object structure is following. 
+The return data structure is following. 
 
 ```json
 [
