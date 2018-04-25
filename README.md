@@ -18,7 +18,7 @@ This is very lean package that uses scrapes the website of the board you request
 
 * [Install](#install)
 * [Usage](#usage)
-  * [Get Board](#get-board)
+  * [.getBoard(boardId: String): Promise](#getboardboardid-string-promise)
 * [Contributors](#contributors)
 * [License](#license)
 
@@ -32,11 +32,9 @@ npm install gomoodboard-api
 
 ## Usage
 
-### Get Board
+### .getBoard(boardId: String): Promise
 
-To get a board in a structured format, use the `getBoard` method. You can get the board ID from the board url.
-
-`.getBoard(boardId: String): Promise`
+Get a board in a structured format. You can get the board ID from the gomoodboard board url.
 
 ```js
 const GomoodboardApi = require('gomoodboard-api');
