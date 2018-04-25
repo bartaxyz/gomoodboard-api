@@ -14,13 +14,12 @@
 
 * [Install](#install)
 * [Usage](#usage)
+  * [Get Board](#get-board)
 * [Contributors](#contributors)
 * [License](#license)
 
 
 ## Install
-
-[npm][]:
 
 ```sh
 npm install gomoodboard-api
@@ -29,13 +28,31 @@ npm install gomoodboard-api
 
 ## Usage
 
+### Get Board
+
 ```js
 const GomoodboardApi = require('gomoodboard-api');
 
-const gomoodboardApi = new GomoodboardApi();
+GomoodboardApi.getBoard('pjK9oD41');
 
-console.log(gomoodboardApi.renderName());
-// script
+/*
+returns: 
+
+  [
+    {
+      "image": {
+        "id": 12442816,
+        "name": null,
+        "comment": "",
+        "viewable": null,
+        "filepath": "/gomoodboard.com/production%2F1407439227897-rvbul86dbhloko6r-7a4f0193115d2d804696b560775573f4%2Fexposure-12.jpg",
+        "full": "http://d1lfunetf0rx3e.cloudfront.net/production%2F1407439227897-rvbul86dbhloko6r-7a4f0193115d2d804696b560775573f4%2Fexposure-12.jpg",
+        "order_position": null,
+      }
+    }
+  ]
+
+*/
 ```
 
 
@@ -49,8 +66,3 @@ console.log(gomoodboardApi.renderName());
 ## License
 
 [MIT](LICENSE) © [Ondřej Bárta](http://ondrejbarta.xyz)
-
-
-## 
-
-[npm]: https://www.npmjs.com/
