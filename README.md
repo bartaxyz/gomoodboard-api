@@ -42,7 +42,7 @@ GomoodboardApi.getBoard('pjK9oD41').then((data) => {
 });
 ```
 
-The return data structure is following. 
+The `data` object structure is following. 
 
 ```json
 [
