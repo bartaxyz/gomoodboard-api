@@ -24,7 +24,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "codecov": "^2.3.1",
+    "codecov": "^2.3.0",
     "cross-env": "^5.0.5",
     "eslint": "^4.5.0",
     "eslint-config-airbnb": "^16.1.0",
@@ -84,7 +84,6 @@
     "lint": "xo",
     "precommit": "lint-staged && npm test",
     "test": "npm run lint && npm run test-coverage",
-    "test-coverage": "cross-env NODE_ENV=test nyc ava",
-    "report-coverage": "codecov"
+    "test-coverage": "cross-env NODE_ENV=test nyc ava"
   }
 }
