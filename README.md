@@ -2,7 +2,7 @@
 
 Unofficial API package for GoMoodboard
 
-This is very lean package that uses scrapes the website of the board you request. And then returns all the images on the board in JSON format.
+This is very lean package that scrapes the website of the board you request. Then passes all of the images on the board in JSON format as a promise.
 
 :warning: This package could break anytime. It is **NOT** officially supported.
 
