@@ -1,39 +1,30 @@
-/*
-const axios = require('axios');
+import axios from 'axios';
 
 const protocol = 'http';
-const endpoint = `${protocol}://www.gomoonboard.com`;
+const endpoint = `${protocol}://www.gomoodboard.com`;
+const scriptTagContentRegExp = /<script type="text\/json" id="bootstrap">([\S\s]*?)<\/script>/;
 
 const getBoardURL = boardId => `${endpoint}/boards/${boardId}`;
 
-const findEmbeddedScriptTag = plainTextHTML => (
-  plainTextWebsite.match(
-    /<script type="text\/json" id="bootstrap">([\S\s]*?)<\/script>/
-  )[0]
-);
+const findEmbeddedScriptTag = plainTextHTML =>
+  plainTextHTML.match(scriptTagContentRegExp)[0];
 
-const stripEmbeddedScriptTag = plainTextHTML => (
+const stripEmbeddedScriptTag = plainTextHTML =>
   plainTextHTML
     .replace('<script type="text/json" id="bootstrap">', '')
-    .replace('</script>', '')
-);
+    .replace('</script>', '');
 
-const findAndStripEmbeddedScriptTag = plainTextHTML => (
-  stripEmbeddedScriptTag(findEmbeddedScriptTag(plainTextHTML))
-);
+const findAndStripEmbeddedScriptTag = plainTextHTML =>
+  stripEmbeddedScriptTag(findEmbeddedScriptTag(plainTextHTML));
 
 const fixJSONEncoding = plainTextJSON => plainTextJSON.replace(/&quot;/g, '"');
 
 const findAndParseEmbeddedJSON = plainTextHTML => {
   const embeddedJSON = findAndStripEmbeddedScriptTag(plainTextHTML);
   return JSON.parse(fixJSONEncoding(embeddedJSON));
-}
+};
 
-export const getBoard = (boardId) => (
+export const getBoard = boardId =>
   axios
-    .get('http://www.gomoodboard.com/boards/pjK9oD41')
-    .then(response => {
-      return findAndParseEmbeddedJSON(response.data);
-    });
-);
-*/
+    .get(getBoardURL(boardId))
+    .then(response => findAndParseEmbeddedJSON(response.data));
