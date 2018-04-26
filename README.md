@@ -27,7 +27,7 @@ npm install gomoodboard-api
 
 ### `.getBoard(boardId: String): Promise`
 
-Get a board in a structured format. You can get the board ID from the gomoodboard board url.
+Get a board in a structured format. You can get the board ID from the gomoodboard board url. (In some cases you'll need to add `/share` after ID as `<boardId>/share` to make it work properly)
 
 ```js
 const GomoodboardApi = require('gomoodboard-api');

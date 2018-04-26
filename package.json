@@ -1,7 +1,7 @@
 {
   "name": "gomoodboard-api",
   "description": "Custom API for GoMoodboard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Ondřej Bárta <email@ondrejbarta.xyz> (http://ondrejbarta.xyz)",
   "bugs": {
     "url": "https://github.com/bartaxyz/gomoodboard-api/issues",
