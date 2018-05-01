@@ -1,5 +1,8 @@
 # gomoodboard-api
 
+[![Build Status](https://travis-ci.org/bartaxyz/gomoodboard-api.svg?branch=master)](https://travis-ci.org/bartaxyz/gomoodboard-api)
+![npm](https://img.shields.io/npm/dw/gomoodboard-api.svg)
+
 Unofficial API package for GoMoodboard
 
 This is very lean package that scrapes the website of the board you request. Then passes all of the images on the board in JSON format as a promise.
